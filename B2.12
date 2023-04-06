@@ -1,0 +1,44 @@
+Cài đặt :
+#include <iostream>
+using namespace std;
+ 
+int fib(int n){
+  if(n <= 2) return 1;
+  return fib(n - 1) + fib(n - 2);
+}
+ 
+int main() {
+  int kq,n;
+  cout<<"Nhập vị trí n muốn tìm trong dãy fibonacci: ";
+  cin>>n;
+  kq = fib(n);
+  cout<<"\nSố fibonacci ở vị trí "<<n<<" là: "<<kq;
+  cout<<"\n-----------------------------------\n";
+}
+Ví dụ :
+#include <iostream>
+using namespace std;
+int fibonacci_series(int);
+int main()
+{
+   int count, c = 0, i;
+   cout<<"Nhập vào số lượng các số trong chuỗi Fibonacci: ";
+   cin>>count;
+   cout<<"\n chuỗi Fibonacci là: \n";
+   for ( i = 1 ; i <= count ; i++ )
+   {
+      cout<<fibonacci_series(c)<<endl;
+      c++; 
+   }
+   cout<<"\n----------------------------\n";
+
+}
+int fibonacci_series(int num)
+{
+   if ( num == 0 )
+     return 0;
+   else if ( num == 1 )
+     return 1;
+   else
+     return ( fibonacci_series(num-1) + fibonacci_series(num-2) );
+}
